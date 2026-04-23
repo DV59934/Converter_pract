@@ -34,6 +34,17 @@ def weight_conv():
     else:
         print("Ошибка: введите g или kg")
 
+def volume_conv():
+    val = float(input("Введите значение: "))
+    unit = input("Из единиц (l/gal): ").lower()
+    if unit == 'l':
+        result = val / 3.78541
+        print(f"{val} л = {result:.2f} галлон")
+    elif unit == 'gal':
+        result = val * 3.78541
+        print(f"{val} галлон = {result:.2f} л")
+    else:
+        print("Ошибка: введите l или gal")
 
 def main():
     while True:
@@ -45,6 +56,8 @@ def main():
             length_conv()
         elif choice == '2':
             weight_conv()
+        elif choice == '3':
+            volume_conv()
         else:
             print("Функция в разработке")
 
