@@ -46,6 +46,18 @@ def volume_conv():
     else:
         print("Ошибка: введите l или gal")
 
+def temp_conv():
+    val = float(input("Введите значение: "))
+    unit = input("Из единиц (C/F): ").lower()
+    if unit == 'c':
+        result = val * 9/5 + 32
+        print(f"{val}°C = {result:.1f}°F")
+    elif unit == 'f':
+        result = (val - 32) * 5/9
+        print(f"{val}°F = {result:.1f}°C")
+    else:
+        print("Ошибка: введите C или F")
+
 def main():
     while True:
         show_menu()
@@ -58,6 +70,8 @@ def main():
             weight_conv()
         elif choice == '3':
             volume_conv()
+        elif choice == '4':
+            temp_conv()
         else:
             print("Функция в разработке")
 
