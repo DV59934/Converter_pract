@@ -1,5 +1,7 @@
 import math
 
+import sys
+
 def show_menu():
     print("\nКонвертер величин")
     print("1. Длина (см - м)")
