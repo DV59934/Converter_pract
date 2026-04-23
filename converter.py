@@ -22,6 +22,19 @@ def length_conv():
     else:
         print("Ошибка: введите cm или m")
 
+def weight_conv():
+    val = float(input("Введите значение: "))
+    unit = input("Из единиц (g/kg): ").lower()
+    if unit == 'g':
+        result = val / 1000
+        print(f"{val} г = {result:.3f} кг")
+    elif unit == 'kg':
+        result = val * 1000
+        print(f"{val} кг = {result:.3f} г")
+    else:
+        print("Ошибка: введите g или kg")
+
+
 def main():
     while True:
         show_menu()
@@ -30,6 +43,8 @@ def main():
             break
         elif choice == '1':
             length_conv()
+        elif choice == '2':
+            weight_conv()
         else:
             print("Функция в разработке")
 
